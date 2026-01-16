@@ -1,0 +1,8 @@
+# Sindri Engine - Rust voxel engine workspace
+[workspace]
+members = [
+  "crates/sindri_core",
+  "crates/sindri_client",
+  "crates/sindri_server"
+]
+resolver = "2"
