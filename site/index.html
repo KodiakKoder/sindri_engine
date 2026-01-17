@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sindri Engine</title>
+  <meta name="description" content="Sindri Engine — a forged voxel engine in Rust (winit + wgpu), built for Windows and Linux." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="wrap header">
+    <div>
+      <h1>Sindri Engine</h1>
+      <p class="subtitle">A forged voxel engine in Rust. Windows + Linux Mint. Built from first principles.</p>
+      <div class="cta">
+        <a class="btn" href="#getting-started">Getting Started</a>
+        <a class="btn ghost" href="#devlog">Devlog</a>
+      </div>
+      <p class="meta">
+        License: <strong>NCNR (Non-Commercial / No-Resale)</strong> • GPU: wgpu • Windowing: winit
+      </p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="card">
+      <h2>What it is</h2>
+      <p>
+        Sindri Engine is a voxel-engine project inspired by sandbox worlds and mod-friendly design.
+        The goal: a clean engine core with a fast client renderer and (later) an authoritative server.
+      </p>
+      <ul class="list">
+        <li><strong>Cross-platform rendering:</strong> wgpu (Vulkan/DX12/etc.)</li>
+        <li><strong>Cross-platform window/input:</strong> winit</li>
+        <li><strong>Compatibility flags:</strong> <code>--fallback-gpu</code>, <code>--low-power</code></li>
+      </ul>
+    </section>
+
+    <section id="getting-started" class="card">
+      <h2>Getting Started</h2>
+      <ol class="list">
+        <li>Install Rust via rustup</li>
+        <li>Clone the repo</li>
+        <li>Run the client:</li>
+      </ol>
+      <pre><code>cargo run -p sindri_client</code></pre>
+      <p class="hint">Fallback GPU mode (safe mode):</p>
+      <pre><code>cargo run -p sindri_client -- --fallback-gpu</code></pre>
+    </section>
+
+    <section id="devlog" class="card">
+      <h2>Devlog</h2>
+      <article class="devlog">
+        <h3>2026-01-16 — First Render: Triangle Milestone</h3>
+        <p>
+          We created a windowed Rust client using winit, initialized wgpu, and drew our first geometry:
+          a triangle rendered through a custom pipeline. We also added <code>--fallback-gpu</code> to help
+          users with weak/broken drivers run the engine in a compatibility mode.
+        </p>
+        <p class="hint">Full devlog lives in the repo: <code>DEVLOG.md</code></p>
+      </article>
+    </section>
+
+    <section class="card">
+      <h2>Roadmap</h2>
+      <ul class="list">
+        <li>Indexed cube + depth buffer</li>
+        <li>WASD + mouse camera</li>
+        <li>Chunk meshing prototype</li>
+        <li>Save/load world</li>
+        <li>Modding/scripting layer (later)</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Contact</h2>
+      <p>
+        Want to collaborate or license Sindri for commercial use? Reach out.
+      </p>
+      <p class="hint">Add your email/Discord here when ready.</p>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <p>© <span id="y"></span> Sindri Engine. Forged, not bought.</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
