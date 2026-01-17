@@ -7,15 +7,19 @@
   <meta name="description" content="Sindri Engine — a forged voxel engine in Rust (winit + wgpu), built for Windows and Linux." />
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <header class="wrap header">
     <div>
       <h1>Sindri Engine</h1>
       <p class="subtitle">A forged voxel engine in Rust. Windows + Linux Mint. Built from first principles.</p>
+
       <div class="cta">
         <a class="btn" href="#getting-started">Getting Started</a>
+        <a class="btn ghost" href="#first-render">First Render</a>
         <a class="btn ghost" href="#devlog">Devlog</a>
       </div>
+
       <p class="meta">
         License: <strong>NCNR (Non-Commercial / No-Resale)</strong> • GPU: wgpu • Windowing: winit
       </p>
@@ -43,9 +47,32 @@
         <li>Clone the repo</li>
         <li>Run the client:</li>
       </ol>
+
       <pre><code>cargo run -p sindri_client</code></pre>
+
       <p class="hint">Fallback GPU mode (safe mode):</p>
       <pre><code>cargo run -p sindri_client -- --fallback-gpu</code></pre>
+
+      <p class="hint">Low power (laptops / iGPU preference):</p>
+      <pre><code>cargo run -p sindri_client -- --low-power</code></pre>
+    </section>
+
+    <section id="first-render" class="card screenshot">
+      <h2>First Render</h2>
+      <p class="hint">
+        Sindri Engine’s first successful GPU render — a triangle drawn through a custom wgpu pipeline
+        with cross-platform support and fallback GPU mode.
+      </p>
+
+      <div class="screenshot-frame">
+        <img
+          src="assets/sindri_triangle.png"
+          alt="Sindri Engine first render triangle"
+          loading="lazy"
+        />
+      </div>
+
+      <p class="caption">January 2026 · winit + wgpu · Vulkan / DX12</p>
     </section>
 
     <section id="devlog" class="card">
@@ -74,9 +101,7 @@
 
     <section class="card">
       <h2>Contact</h2>
-      <p>
-        Want to collaborate or license Sindri for commercial use? Reach out.
-      </p>
+      <p>Want to collaborate or license Sindri for commercial use? Reach out.</p>
       <p class="hint">Add your email/Discord here when ready.</p>
     </section>
   </main>

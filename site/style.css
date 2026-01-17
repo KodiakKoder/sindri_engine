@@ -58,3 +58,27 @@ pre{
 }
 
 .footer{ padding:28px 0 40px; color:var(--muted); }
+
+.screenshot-frame {
+  margin-top: 14px;
+  background: #0b0d12;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+}
+
+.screenshot-frame img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+}
+
+.caption {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: var(--muted);
+  text-align: center;
+}
